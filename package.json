@@ -1,0 +1,26 @@
+{
+  "name": "fastify_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "fastify start app.js",
+    "mongo:start": "docker run --rm -d -p 27017:27017 --name mongo-todo mongo:4",
+    "mongo:stop": "docker stop mongo-todo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/env": "^3.0.0",
+    "@fastify/mongodb": "^5.0.0",
+    "@fastify/routes": "^4.0.0",
+    "fastify": "^3.29.0",
+    "fastify-cli": "^3.1.0",
+    "fastify-plugin": "^3.0.1",
+    "joi": "^17.6.0",
+    "middie": "^6.1.0",
+    "mongoose": "^6.3.4"
+  }
+}

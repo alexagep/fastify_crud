@@ -1,0 +1,200 @@
+[
+    [
+        "/",
+        [
+            {
+                "method": "GET",
+                "url": "/",
+                "path": "/",
+                "routePath": "/",
+                "prefix": "",
+                "logLevel": "",
+                "attachValidation": false
+            }
+        ]
+    ],
+    [
+        "/users",
+        [
+            {
+                "method": "GET",
+                "url": "/users",
+                "path": "/users",
+                "routePath": "/users",
+                "prefix": "",
+                "logLevel": "",
+                "attachValidation": false
+            }
+        ]
+    ],
+    [
+        "/user/:id",
+        [
+            {
+                "method": "GET",
+                "url": "/user/:id",
+                "schema": {
+                    "params": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "response": {
+                        "200": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "description": {
+                                    "type": "string"
+                                },
+                                "qty": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                },
+                "path": "/user/:id",
+                "routePath": "/user/:id",
+                "prefix": "",
+                "logLevel": "",
+                "attachValidation": false
+            }
+        ]
+    ],
+    [
+        "/user/create",
+        [
+            {
+                "method": "POST",
+                "url": "/user/create",
+                "schema": {
+                    "body": {
+                        "type": "object",
+                        "required": [
+                            "name",
+                            "description",
+                            "qty"
+                        ],
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "qty": {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "response": {
+                        "200": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "path": "/user/create",
+                "routePath": "/user/create",
+                "prefix": "",
+                "logLevel": "",
+                "attachValidation": false
+            }
+        ]
+    ],
+    [
+        "/user/update/:id",
+        [
+            {
+                "method": "PUT",
+                "url": "/user/update/:id",
+                "schema": {
+                    "params": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "body": {
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "qty": {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    "response": {
+                        "200": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "path": "/user/update/:id",
+                "routePath": "/user/update/:id",
+                "prefix": "",
+                "logLevel": "",
+                "attachValidation": false
+            }
+        ]
+    ],
+    [
+        "/user/delete/:id",
+        [
+            {
+                "method": "DELETE",
+                "url": "/user/delete/:id",
+                "schema": {
+                    "params": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "response": {
+                        "200": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "path": "/user/delete/:id",
+                "routePath": "/user/delete/:id",
+                "prefix": "",
+                "logLevel": "",
+                "attachValidation": false
+            }
+        ]
+    ]
+]
